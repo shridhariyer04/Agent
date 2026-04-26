@@ -40,7 +40,7 @@ export async function scrapeWebsite(inputUrl:string,
 ):Promise<ScrapeResult> {
 
     const url = inputUrl.startsWith("http")? inputUrl:  `http://${inputUrl}`
-    const response = await fetch("http://api.tavily.com/extract",{
+    const response = await fetch("https://api.tavily.com/extract",{
         method:"POST",
         headers:{
             "Content-Type": "application/json",
